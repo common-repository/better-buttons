@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Better Buttons Documentation</title>
+	<link rel="stylesheet" type="text/css" href="includes/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600">
+	<link rel="stylesheet" type="text/css" href="includes/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="includes/css/styles.css">
+
+</head>
+<body>
+<header class="container">
+	<h1>Better Buttons - <small>Documentation v1.0</small></h1>
+	<p>Amazon Affiliate Call to Action buttons users will actually click.</p>
+	<br>
+	<h3>Table of Contents</h3>
+	<ol>
+		<li><a href="#Installation">Installation</a></li>
+		<li><a href="#Configuration">Configuring the Plugin</a></li>
+		<li><a href="#Implementation">Adding Buttons and using the shortcodes</a></li>
+		<li><a href="#Examples">Shortcode Examples</a></li>
+		<li><a href="#Reference">Code Reference</a></li>
+
+	</ol>
+
+	<hr>
+
+	<h2 id="Installation">1. Installation</h2>
+	<p>Installing the plugin is easy, and can be done through simply uploading the ZIP package into Wordpress admin.</p>
+	<ol>
+		<li>Firstly, login to your wp-admin with an account that has administrative privileges.</li>
+		<li>Navigate and click on the <mark>Plugin</mark> section in the left hand menu.</li>
+		<li>On the top left side of this page click the <kbd>Add New</kbd> button to add a new Plugin.</li>
+		<li>This will take you to the Plugin Installation page. From there click the <kbd>Upload Plugin</kbd> button in the top left corner. Click choose file and choose and navigate to the ZIP file you downloaded from CodeCanyon. Finally click <kbd>Install Now</kbd>.</li>
+		<li>Once installed go back to the Plugins pack by clicking on the <kbd>Plugin</kbd> option once again on the left hand menu. Find the Better Buttons Plugin in the table and click Activate.</li>
+	</ol>
+
+	<hr>
+
+	<h2 id="Configuration">2. Configuring the Plugin</h2>
+	<p>Once you have successfully installed the Plugin you must configure it with both your <strong>Amazon Affiliate Tag</strong> and your <strong>Amazon API Keys</strong>.</p>
+	<ol>
+		<li>To find the settings page, once logged in to the Wordpress admin <strong>hover</strong> over the <kbd>Settings</kbd> option on the left hand menu and then click on the <kbd>Better Buttons Settings</kbd> option from the drop-down menu. </li>
+		<br>
+
+		<img src="includes/imgs/settings-page.png">
+		<br>
+		<li>Once on this page, you must enter your Amazon API Access Key, Secret Key, Affiliate tag and Locale
+			<ul>
+				<li><strong>Access and Secrey Key</strong> - Follow the Instructions <a href="https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html">here</a> to get the keys. You will need to signup for an AWS account. These keys are used to communicate with the Amazon API's to automatically update the pricing and pictures in the buttons or box.</li>
+				<li><strong>Amazon Affiliate Tag</strong> - This is your Amazon Associate tag. It is usually a word followed by a number (somename-20). If you haven't already signed up for the Affiliate program you can do so <a href="https://affiliate-program.amazon.com/">here</a>.</li>
+				<li><strong>Amazon Locale</strong> - This is simply the store version you wish to use.</li>
+			</ul>
+
+		<li>Once you have input the above information click <kbd>Save Changes</kbd>. Your settings are now saved and the Plugin is fully setup for use.</li>
+		</li>
+	</ol>
+
+	<hr>
+
+	<h2 id="Implementation">3. Adding Buttons and using the shortcodes</h2>
+	<p>The Plugin uses short-codes to implement the Buttons into a post. Use the shortcode below and paste it into your post and change the shortcodes settings. Below is an example of a button's short-code</p>
+	<samp>[betterbutton type="box" asin="B075TWLZ18" color="blue"]</samp>
+	<br>
+	<img src="includes/imgs/short-code_example1.png">
+	<br>
+	<p><strong>This will result in a button like the one shown below.</strong></p>
+	<br>
+	<img src="includes/imgs/short-code_example2.png">
+	<br>
+	<p>As you can see the pricing information and the image of the product are automatically imported. When the user clicks the <kbd>Buy Now</kbd> button they will be directed to amazon through your affiliate link. The short-code takes 3 inputs the type, asin and color. When inputting these ensure that they are <strong>lowercase</strong> otherwise the button may not work.</p>
+	<h3>Shortcode Attributes</h3>
+	<ul>
+		<li><strong>type</strong> - box, rectangle or round</li>
+		<li><strong>asin</strong> - This is the amazon product identification number. This can be found on the product's page you are linking by clicking <kbd>CTRL+F</kbd> and typing ASIN in the search box or by looking at the product URL. https://www.amazon.com/dp/<mark>B00IMJ0UZG</mark>/ref=sspa_dk_detail_5?psc=1 , the highlighted part is the products ASIN.</li>
+		<li><strong>color</strong> - red,black,yellow,blue,light-blue,green,red-outline,black-outline, yellow-outline, light-blue-outline, green-outline, blue-outline</li>
+	</ul>
+	<br>
+	<hr>
+	<h2 id="Examples">Shortcode Examples</h2>
+	<h3>Amazon Rectangle</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-blue' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="blue"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-red' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="red"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-green' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="green"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-light-blue' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="light-blue"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-yellow' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="yellow"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-black' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="black"]</samp>
+		</div>
+
+	</div>
+
+	<h3>Amazon Round</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-blue' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="blue"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-red' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="red"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-green' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="green"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-light-blue' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="light-blue"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-yellow' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="yellow"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-black' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="black"]</samp>
+		</div>
+
+	</div>
+
+	<h3>Amazon Rectangle Outline</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-blue-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="blue-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-red-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="red-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-green-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="green-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-light-blue-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="light-blue-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-yellow-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="yellow-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-rectangle betterbutton-black-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="rectangle" asin="B00IMJ0UZG" color="black-outline"]</samp>
+		</div>
+
+	</div>
+
+	<h3>Amazon Round Outline</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-blue-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="blue-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-btn-red-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="red-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-green-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="green-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-light-blue-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="light-blue-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>        
+	          <button class='betterbutton-btn-round betterbutton-yellow-outline' >
+	          	<a href='http://amzn.to/2Hqjmte' target='_blank'>
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	        	</a>
+	          </button>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="yellow-outline"]</samp>
+		</div>
+
+		<div class="col-md-4">
+			<div class='betterbutton'>
+			<a href='http://amzn.to/2Hqjmte' target='_blank'>        
+	          <button class='betterbutton-btn-round betterbutton-black-outline' >
+	            	<i class='fas fa-shopping-cart'></i><span class='betterbutton-text'> $169.99 on Amazon.com</span>
+	          </button>
+	         </a>
+	    	</div>
+	    <samp>[betterbutton type="round" asin="B00IMJ0UZG" color="black-outline"]</samp>
+		</div>
+	</div>
+
+	<h3>Amazon Buy Now Box</h3>
+	<div class="row">
+		<div class="betterbutton-buynow-box">
+		    <div class="betterbutton-buynow-box-inner">
+		          <img src="https://images-na.ssl-images-amazon.com/images/I/41%2Btu7zKzvL.jpg" class="betterbutton-buynow-box-img"></img>
+
+		          <div class="betterbutton-buynow-box-right">  
+		            <div class="betterbutton-buynow-box-price">  
+		              $149.99
+		            </div>
+
+		            <div class="betterbutton-buynow-box-button">
+		                  <button class="betterbutton-btn-rectangle betterbutton-red">
+		                    <a href="'www.google.com'" target="_blank">
+		                    <span class="betterbutton-text"><i class="fas fa-shopping-cart"></i> Buy now</span>
+		                    </a>
+		                  </button> 
+		                  
+		            </div>
+		          </div>
+        </div>
+        <div style="text-align: center;">
+        		<samp>[betterbutton type="box" asin="B079DD918L" color="blue-outline"]</samp><span><strong>Note:</strong> the colors can be changed the same way as any of the above.</span>
+
+        </div>
+
+      </div>
+
+	</div>
+
+	<h2 id="Reference">Code Reference</h2>
+	<p>All code is heavily documented. The Plugin is broken up into components for your convenience if you wish to make any changes. </p>
+	<dl>
+		<dt>betterbuttons.php</dt>
+		<dd>Contains the basic functions of the Plugin and requires the other components. Contains the API interactions and Database functions. Also has the wp_event that updates the products each hour. </dd>
+		<dt>betterbuttons-shortcodes.php</dt>
+		<dd>Contains the code for the shortcode. Interacts with the functions in the main php file and returns html based on the attributes of the shortcode.</dd>
+		<dt>betterbuttons-settings.php</dt>
+		<dd>Contains the php and html for the settings page.</dd>
+		<dt>includes/css</dt>
+		<dd>Contains all the styles for the plugin. Styles.css contains all the styles for the buttons aswell as this help file. Also included are bootstrap and fontawesome.</dd>
+		<dt>includes/webfonts</dt>
+		<dd>Contains the webfonts for fontawesome.</dd>
+	</dl>
+
+
+
+</header>
+</body>
+</html>

@@ -1,0 +1,250 @@
+
+/*Better Buttons Styles*/
+/*Styles for the buttons*/
+
+/*Initial Styles for each different type of button*/
+.betterbutton-text{
+	font-family: 'Libre Franklin', sans-serif;
+	margin-left:5px;
+	font-size: 16px
+}
+
+.betterbutton-btn{
+	font-size:16px;
+	font-weight: 800;
+}
+.betterbutton-btn-round{
+	border-radius: 50px;
+	display:block;
+	font-family: 'Libre Franklin', sans-serif;
+	color:white;
+	border: none;
+	padding:16px 32px 16px 32px;
+
+}
+
+
+.betterbutton-btn-rectangle{
+	border-radius: 0px;
+	font-family: 'Libre Franklin', sans-serif;
+	color:white;
+	border: none;
+	padding:16px 32px 16px 32px;
+
+}
+
+.betterbutton-btn-round a{
+	color:white;
+	text-decoration: none;
+	border: none;
+	border-bottom: none !important;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+text-transform: none;
+
+}
+
+.betterbutton-btn-rectangle a{
+	color:white;
+	text-decoration: none;
+	border: none;
+	border-bottom: none !important;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+text-transform: none;
+}
+.betterbutton-btn-rectangle:hover> a{
+	color:white;
+	text-decoration: none;
+	border: none;
+}
+
+.betterbutton-btn-round:hover> a{
+	color:white;
+	text-decoration: none;
+	border: none;
+}
+
+/*Colors*/
+/*CSS Color Settings for each different color aswell as hover styling*/
+.betterbutton-green{
+	background:#44c31d;
+}
+.betterbutton-green-outline{
+	border:2px solid #44c31d;
+	color: #44c31d;
+	background:none;
+}
+
+.betterbutton-green-outline a{
+	color: #44c31d;
+}
+.betterbutton-green:hover{
+	background:#318816;
+}
+
+.betterbutton-green-outline:hover{
+	background:#44c31d;
+	color:white;
+}
+
+.betterbutton-blue{
+	background:#0275d8;
+}
+
+.betterbutton-blue-outline{
+	border:2px solid #0275d8;
+	color: #0275d8;
+	background:none;
+}
+
+.betterbutton-blue-outline a{
+	color: #0275d8;
+}
+
+.betterbutton-blue:hover{
+	background:#01559e;
+}
+
+.betterbutton-blue-outline:hover{
+	background:#0275d8;
+	color:white;
+}
+
+.betterbutton-light-blue{
+	background:#5bc0de;
+}
+
+.betterbutton-light-blue:hover{
+	background:#42899e;
+}
+.betterbutton-light-blue-outline{
+	border:2px solid #5bc0de;
+	color: #5bc0de;
+	background:none;
+}
+
+.betterbutton-light-blue-outline a{
+	color: #5bc0de;
+}
+
+.betterbutton-light-blue-outline:hover{
+	background:#5bc0de;
+	color:white;
+}
+
+.betterbutton-yellow{
+	background:#f0ad4e;
+}
+.betterbutton-yellow-outline{
+	border:2px solid #f0ad4e;
+	color: #f0ad4e;
+	background:none;
+}
+
+.betterbutton-yellow-outline a{
+	color: #f0ad4e;
+}
+.betterbutton-yellow:hover{
+	background:#c77a0d;
+}
+
+.betterbutton-yellow-outline:hover{
+	background:#f0ad4e;
+	color:white;
+}
+
+.betterbutton-red{
+	background:#d9534f;
+}
+.betterbutton-red-outline{
+	border:2px solid #d9534f;
+	color: #d9534f;
+	background:none;
+}
+
+.betterbutton-red-outline a{
+	color: #d9534f;
+}
+
+.betterbutton-red:hover{
+	background:#9a3a37;
+}
+
+.betterbutton-red-outline:hover{
+	background:#d9534f;
+	color:white;
+}
+
+.betterbutton-black{
+	background:#292b2c;
+}
+.betterbutton-black-outline{
+	border:2px solid #292b2c;
+	color: #292b2c;
+	background:none;
+}
+
+.betterbutton-black-outline a{
+	color: #292b2c;
+}
+.betterbutton-black-outline:hover{
+	background:#292b2c;
+	color:white;
+}
+
+.betterbutton-black:hover{
+	background:#626567;
+}
+
+/*Buy Now Box*/
+/*CSS Styles for the Buy Now box*/
+
+.betterbutton-buynow-box{
+	margin-top: 20px;
+	margin-bottom:20px;
+	display: block;
+	margin-left: auto;
+  	margin-right: auto;
+  	width: 100%;
+
+}
+.betterbutton-buynow-box-inner{
+	border:1px solid #E9E9E9;
+	border-radius: 4px;
+	height:200px;
+	display: table;
+	margin:0 auto;
+	min-width:400px;
+}
+
+.betterbutton-buynow-box-img{
+	float:left;
+	width:150px;
+	height:150px;
+	margin:25px 10px 25px 10px;
+
+}
+
+.betterbutton-buynow-box-right{
+	float:right;
+	text-align: center;
+	margin-right: 10px
+	/*padding:25px;*/
+}
+
+.betterbutton-buynow-box-price{
+	font-family: 'Libre Franklin', sans-serif;
+	font-size:30px;
+	font-weight: bold;
+	padding:57px 25px 5px 10px;
+
+}
+
+.betterbutton-buynow-box-button{
+	padding:5px 25px 10px 10px;
+}
+
+.betterbutton-buynow-box-button button{
+	font-size: 12px
+}
